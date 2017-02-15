@@ -1,0 +1,433 @@
+/*
+====================
+    general
+====================
+*/
+
+html {
+    font-size: 14px; /* To match Bootstrap's <body> */
+}
+
+body {
+    background-image: url("../images/ng2074_v2.jpg");
+    background-repeat: repeat-y;
+    background-size: 100% auto;
+}
+
+/* Values based on Bootstrap 3 font-sizes */
+h1 {
+    font-size: 2.571428571rem; /* 35.99999999px */
+}
+h2 {
+    font-size: 2.142857143rem; /* 30px */
+}
+h3 {
+    font-size: 1.714285714rem; /* 24px */
+}
+h4 {
+    font-size: 1.285714286rem; /* 18px */
+}
+h5 {
+    font-size: 1rem; /* 14px */
+}
+h6 {
+    font-size: 0.142857143rem; /* 2.000000002px */
+}
+
+#pageHeader {
+    text-align: center;
+    padding-top:2.857142857rem; /* 40px */
+    padding-bottom:1.785714286rem; /* 25px */
+}
+#pageHeader span {
+    color:black;
+    font-family: "GoodTimesRg-Regular";
+    font-size: 2rem; /* 28px */
+}
+
+#header {
+    min-height:9.285714286rem; /* 130px */
+}
+
+/*
+====================
+    logo
+====================
+*/
+
+#logoContainer {
+    height:7.142857143rem; /* 100px */
+    text-align: center;
+}
+#logo {
+    text-decoration: none;
+    display: inline-block;
+}
+#logo img {
+    height:6.428571429rem; /* 90.00000001px */
+    margin-top:0.357142857rem; /* 4.999999998px */
+}
+
+/*
+====================
+    nav bar
+====================
+*/
+
+#nav {
+    height:2.142857143rem; /* 30px */
+    color:white;
+    text-align: center;
+    overflow: hidden;
+}
+#nav ul {
+    border:none;
+    display: inline-block;
+    font-size:1.2rem; /* 16.8px */
+    padding:0;
+    margin-bottom:0;
+    list-style: none;
+}
+#nav li {
+    width:10.71428571rem; /* 149.9999999px */
+    position: relative;
+    float:left;
+    display: block;
+    margin-bottom:-0.071428571rem; /* 0.999999994px */
+    transform: skew(-30deg);
+
+    height: 2.142857143rem; /* 30px */
+
+}
+.navTitle {
+    padding:0;
+    text-decoration: none !important; /* Bypasses Bootstrap line 1096 "a:focus, a:hover"*/ 
+
+    width:100%;
+
+    position: absolute;
+    width:100%;
+    height: 100%;
+    transform: skew(30deg);
+    padding-top:0.214285714rem; /* 2.999999996px */
+}
+
+/* Fills the sides of the nav bar */
+#nav li:nth-child(1)::before {
+    content: "";
+    display: inline-block;
+    height: 2.142857143rem; /* 30px */
+    background-color: black;
+    position:absolute;
+    right:10.64285714rem; /* 149px */
+    width:285em;
+}
+#nav li:nth-last-child(1)::after {
+    content: "";
+    display: inline-block;
+    height: 2.142857143rem; /* 30px */
+    background-color: black;
+    position:absolute;
+    left:10.64285714rem; /* 149px */
+    width:285rem; /* 3990px */
+}
+
+/*
+====================
+    nav buttons
+====================
+*/
+
+.navButton {
+    overflow: hidden;
+    width: 101%;
+    height: 100%;
+    z-index: 1;
+}
+
+.navButtonBackground {
+    color:black;
+}
+
+.navButton, .navTitle {
+    position: absolute;
+    top:0rem; /* 0px */
+    left:0;
+    transition: top 0.75s ease;
+}
+
+.navMain {
+    z-index: 2;
+    background-color: black;
+}
+.navMain a {
+    color:white;
+}
+.navSub {
+    z-index: 1;
+}
+.navSub span {
+    color:black;
+}
+
+.animateUp {
+    top: -2.142857143rem !important; /* 30px */
+}
+.animateDown {
+    top: 2.142857143rem !important; /* 30px */
+}
+.buttonActive {
+    transition:none !important;
+}
+
+
+@media (max-width:540px)
+{
+    #logo img {
+        height: inherit;
+        width:100%;
+    }
+}
+
+@media (max-width:424px)
+{
+/*@425 & above looks good */
+    .navButton {
+        width: 102%;
+    }
+
+    #nav li {
+        width:7.71428571rem; /* 107.9999999px */
+    }
+    #nav li:nth-child(1)::before {
+        content: "";
+        display: inline-block;
+        height: 2.142857143rem; /* 30px */
+        background-color: black;
+        position:absolute;
+        right:7.64285714rem; /* 107px */
+        width:285rem; /* 3990px */
+    }
+    #nav li:nth-last-child(1)::after {
+        content: "";
+        display: inline-block;
+        height: 2.142857143rem; /* 30px */
+        background-color: black;
+        position:absolute;
+        left:7.64285714rem; /* 107px */
+        width:285rem; /* 3990px */
+    }
+}
+
+/*
+====================
+    home
+====================
+*/
+#hero {
+    margin-top:6.428571429rem; /* 90.00000001px */
+    text-align: center;
+}
+#hero div {
+    margin-top:2.5rem; /* 35px */
+}
+#hero span {
+    color:black;
+    font-family: "GoodTimesRg-Regular";
+    font-size: 2.5rem; /* 35px */
+}
+
+/*
+====================
+    simple-blog
+====================
+*/
+
+.entryButtons {
+    width: 20rem; /* 280px */
+    margin:auto;
+    text-align: center;
+}
+.entryButtons button {
+    background-color: transparent;
+    border:none;
+    display: inline-block;
+    width:4.285714286rem; /* 60px */
+    height:4.285714286rem; /* 60px */
+    background-size: 4.285714286rem auto; /* 60px */
+    background-repeat: no-repeat;
+}
+
+.entryFirst {
+    background-image: url("../images/entry_first.png");
+}
+.entryPrevious {
+    background-image: url("../images/entry_previous.png");
+}
+.entryNext {
+    background-image: url("../images/entry_next.png");
+}
+.entryLast {
+    background-image: url("../images/entry_last.png");
+}
+
+/*
+====================
+    footer
+====================
+*/
+#footer {
+    margin:7.142857143rem auto 1.785714286rem; /* 100px & 25px */
+}
+#footerDetails {
+    height: 2.142857143rem; /* 30px */
+    background-color: rgba(0,0,0,0.5);
+    color:white;
+    text-align: center;
+}
+#footerDetails span {
+    margin-top:0.357142857rem; /* 4.999999998px */
+    display: inline-block;
+}
+
+/*
+====================
+    entry
+====================
+*/
+.entryHeader {
+    margin-bottom:1.428571429rem; /* 20.00000001px */
+}
+.entryContainer {
+    padding-bottom:1.428571429rem; /* 20.00000001px */
+}
+.entry {
+    margin:auto;
+    border:0.071428571rem solid black; /* 0.999999994px */
+    background-color:white;
+}
+
+.entryBlock {
+    margin:1.428571429rem; /* 20.00000001px */
+}
+.entrySlim {
+    margin: 0;
+}
+
+.noNav {
+    opacity: 0.3;
+}
+
+.btn {
+    border: 0.071428571rem solid black; /* 0.999999994px */
+}
+
+.bgBlog {
+    max-width:60rem; /* 840px */
+}
+
+.smBlog {
+    max-width:50rem; /* 700px */
+}
+.waterfall {
+    margin-bottom: 1.428571429rem; /* 20.00000001px */
+}
+
+.entry ol {
+    overflow-wrap: break-word;
+}
+
+/*
+===============
+    sidebar
+===============
+*/
+
+.sidebar {
+    border:0.071428571rem solid black; /* 0.999999994px */
+    background-color: white;
+}
+
+.sideEntry {
+    padding-bottom:0.714285714rem; /* 9.999999996px */
+}
+
+.sidebar h3
+{
+    font-size:1rem; /* 14px */
+    font-weight: bold;
+    margin:0.714285714rem auto 0.285714286rem; /* 10px & 4px */
+    color:black;
+    text-decoration: none;
+}
+.sidebar span, .sidebar p {
+    font-size: 0.857142857rem; /* 12px */
+}
+
+.sideEntry + .sideEntry {
+    border-top: 0.071428571rem solid black; /* 0.999999994px */
+}
+
+.sidebar p::before {
+    content:"";
+    display: block;
+    height:0.071428571rem; /* 0.999999994px */
+    background-color:#ccc;
+    width:100%;
+    margin:0.142857143rem auto; /* 2.000000002px */
+}
+
+.sidebarLink {
+    padding-top:0.714285714rem; /* 9.999999996px */
+    text-align: center;
+}
+.sidebarLink a {
+    font-size:1.285714286rem; /* 18px */
+}
+
+/*
+==================
+    responsive
+==================
+*/
+
+@media (min-width: 768px)
+{
+    .entrySidebar {
+        max-width: 70%;
+        margin: auto 2.5%;
+    }
+}
+
+@media (max-width: 767px)
+{
+    .entrySidebar {
+        margin-bottom: 1.428571429rem; /* 20.00000001px */
+    }
+
+    #footerDetails span {
+        margin-top: 0.142857143rem; /* 2.000000002px */
+    }
+}
+
+@media (max-width: 425px)
+{
+    html {
+        font-size: 12px;
+    }
+
+    .sidebar h3
+    {
+        font-size: inherit;
+    }
+    .sidebar span, .sidebar p {
+        font-size: inherit;
+    }
+}
+
+@media (max-width: 320px)
+{
+    html {
+        font-size: 10px;
+    }
+}
